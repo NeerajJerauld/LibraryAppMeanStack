@@ -1,0 +1,126 @@
+<div class="container-fluid col-md-5 col-xl-4 colorWhite g-0">
+  <!-- <div class="row text-center mb-3 mt-3 justify-content-center">
+    <p class="h3 colorBlue">Add Book</p>
+  </div> -->
+  <!-- END OF SIGN UP TEXT -->
+
+  <div class="row bgcolorBlue justify-content-center mb-1 rounded">
+    <div class="col-12 px-5">
+      <form
+        class="row g-1 mt-4"
+        #bookform='ngForm' 
+        (ngSubmit)='updateBook()'
+        method="POST"
+        enctype="multipart/form-data"
+      >
+  
+
+        <div class="col-12">
+          <label  for="title" class="form-label">Title</label>
+          <div class="d-flex">
+            <input
+              type="text"
+              class="form-control rounded-3"
+              id="title" 
+              name="title" 
+              [(ngModel)] ="book.title"
+                 
+            />
+          </div>
+        </div>
+
+        <!-- END OF Title -->
+        <div class="col-12">
+            
+          <label for="author" class="form-label"
+            >Author Name</label
+          >
+
+          <div class="d-flex">
+            <input
+              type="text"
+              class="form-control rounded-3"
+              id="addauthor"
+              name="author"
+              [(ngModel)] ="book.author"
+              required
+            />
+          </div>
+        </div>
+
+        <!-- END OF Author name -->
+
+        <div class="col-12">
+            
+          <label for="genre" class="form-label">Genre</label>
+          <div class="d-flex">
+            <input
+              type="text"
+              class="form-control rounded-3"
+              id="genre" 
+              name="genre" 
+              [(ngModel)] ="book.genre"
+              required
+            />
+          </div>
+        </div>
+
+        <!-- END OF Genre -->
+
+        <div class="col-12">
+            
+            <label for="description" class="form-label">Description</label>
+            <div class="d-flex">
+              <input
+                type="text"
+                class="form-control rounded-3"
+                id="description" 
+                name="description" 
+                [(ngModel)] ="book.description" 
+                required
+              />
+            </div>
+          </div>
+
+        <!-- END OF Description -->
+
+        <div class="col-12 mb-4">
+          <label for="image" class="form-label">Image</label>
+          <div class="d-flex">
+            <input type="text" class="form-control" id="image" name="image"  [(ngModel)] ="book.image" required>
+          </div>
+        </div>
+        
+
+        <!-- END OF Image -->
+        
+
+
+
+
+        <div class="col-10 mb-3 mx-auto">
+          <button
+            type="submit"
+            [disabled]='bookform.form.invalid'
+            class="btn btn-outline-primary mx-auto w-100 rounded-pill"
+          >
+            Update Book
+          </button>
+        </div>
+        <!-- END OF SUBMIT BUTTON -->
+        <hr />
+      </form>
+      <!-- END OF FORM -->
+    </div>
+    <!-- END OF COLUMN TEXT -->
+  </div>
+  <!-- END OF SIGN IN ROW -->
+</div>
+<!-- END OF CONTAINER -->
+
+
+
+
+<!-- --------------------------------------------------- -->
+
+
